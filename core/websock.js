@@ -275,7 +275,7 @@
             var ws_schema = uri.match(/^([a-z]+):\/\//)[1];
             protocols = this.init(protocols, ws_schema);
 
-            this._websocket = new WebSocket(uri, protocols);
+            this._websocket = new WebSocket(uri);
 
             if (protocols.indexOf('binary') >= 0) {
                 this._websocket.binaryType = 'arraybuffer';
